@@ -19,4 +19,9 @@ public class Emprego {
     @Column(name = "endereço")
     private String endereco;
 
+    @Column(name = "pessoa")
+    @JoinColumn(name = "id_pessoa")
+    @JsonIgnoreProperties("empregos")
+    private Pessoa pessoa;
+
 }
