@@ -21,4 +21,8 @@ public class Pessoa {
 
     @Column(name = "idade")
     private Integer idade;
+
+    @OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL)
+    @Column(name = "empregos")
+    private List<Emprego> empregos;
 }
